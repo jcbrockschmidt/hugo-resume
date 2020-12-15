@@ -1,7 +1,7 @@
 # hugo Resume
 
 Created from [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/).
-This is basically a single-page website with auto-scrolling based on left-hand nav.  Dedicated project/publications pages allow more detail.  Includes a client-side search powered by fuse.js at '/search' but currently theme does not link to that anywhere.  Includes an `/admin` endpoint that can allow authorized users to use a WYSIWYG editor and commit files back to markdown, but with a Wordpress/CMS like experience.
+This is basically a single-page website with auto-scrolling based on left-hand nav.  Dedicated project/research pages allow more detail.  Includes a client-side search powered by fuse.js at '/search' but currently theme does not link to that anywhere.  Includes an `/admin` endpoint that can allow authorized users to use a WYSIWYG editor and commit files back to markdown, but with a Wordpress/CMS like experience.
 
 <!-- MarkdownTOC autolink="true" -->
 
@@ -11,7 +11,7 @@ This is basically a single-page website with auto-scrolling based on left-hand n
     - [Summary](#summary)
     - [Data files](#data-files)
     - [Projects](#projects)
-    - [Publications](#publications)
+    - [Research](#research)
     - [Blog / Posts](#blog--posts)
     - [Template params](#template-params)tgggtgc
 - [CMS Editor with Netlify CMS](#cms-editor-with-netlify-cms)
@@ -57,8 +57,8 @@ Data files are used for simple content presented on the homepage.
 Initially projects were in their own JSON file too, but I decided I wanted to allow more detail and custom formatting.
 Projects are added to one of 2 subfolders of `creations` or `contributions`. The difference indicates your role as originator or colaborator.   Use `hugo add projects/TYPE/name-of-project.md` to leverage the proper archetype.
 
-### Publications
-Similar to projects, create them under `publications`. Include any papers, speaking engagements, articles, etc.
+### Research
+Similar to projects, create them under `research`. Include any research projects, papers, speaking engagements, articles, etc.
 
 ### Blog / Posts
 Similar to posts, create them under `blog`. Include any thoughts, musiings, etc.

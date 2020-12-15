@@ -11,41 +11,41 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About</a>
+        <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#about" .Site.BaseURL | relURL }}">About</a>
       </li>
       {{ if .Site.Params.showSkills }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showProjects }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showOpenSource }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#open">Open Source</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showPublications }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#{{ default "Publications" .Site.Params.publicationsAlternateName }}">{{ default "Publications" .Site.Params.publicationsAlternateName }}</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showExperience }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#skills" .Site.BaseURL | relURL }}">Skills</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showEducation }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#education" .Site.BaseURL | relURL }}">Education</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showExperience }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#experience" .Site.BaseURL | relURL }}">Experience</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showResearch }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{{ default "Research" .Site.Params.researchAlternateName | printf "%s/#%s" .Site.BaseURL | relURL }}">{{ default "Research" .Site.Params.researchAlternateName }}</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showProjects }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#projects" .Site.BaseURL | relURL }}">Projects</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showOpenSource }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#open" .Site.BaseURL | relURL }}">Open Source</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showBlog }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#blog">Blog</a>
+            <a class="nav-link js-scroll-trigger" href="{{ printf "%s/#blog" .Site.BaseURL | relURL }}">Blog</a>
           </li>
       {{ end }}
     </ul>

@@ -3,6 +3,18 @@
    {{ if .Site.Params.showSkills }}
        {{ partial "portfolio/skills.html" . }}
    {{ end }}
+   {{ if .Site.Params.showEducation }}
+       {{ partial "portfolio/education.html" . }}
+   {{ end }}
+   {{ if .Site.Params.showExperience }}
+       {{ partial "portfolio/experience.html" . }}
+   {{ end }}
+   {{ if .Site.Params.showResearch }}
+      {{ with .Site.GetPage "section" "research" }}
+         {{ .Scratch.Set "sectionId" (default "Research" .Site.Params.research766666666666666yAlternateName) }}
+         {{ partial "sectionSummary" . }}
+      {{ end }}
+   {{ end }}
    {{ if .Site.Params.showProjects }}
       {{ with .Site.GetPage "section" "projects/creations" }}
          {{ .Scratch.Set "sectionId" "projects" }}
@@ -14,18 +26,6 @@
          {{ .Scratch.Set "sectionId" "open" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
-   {{ end }}
-   {{ if .Site.Params.showPublications }}
-      {{ with .Site.GetPage "section" "publications" }}
-         {{ .Scratch.Set "sectionId" (default "Publications" .Site.Params.publicationsAlternateName) }}
-         {{ partial "sectionSummary" . }}
-      {{ end }}
-   {{ end }}
-   {{ if .Site.Params.showExperience }}
-       {{ partial "portfolio/experience.html" . }}
-   {{ end }}
-   {{ if .Site.Params.showEducation }}
-       {{ partial "portfolio/education.html" . }}
    {{ end }}
    {{ if .Site.Params.showBlog }}
       {{ with .Site.GetPage "section" "blog" }}
