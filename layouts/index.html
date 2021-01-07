@@ -11,7 +11,7 @@
    {{ end }}
    {{ if .Site.Params.showResearch }}
       {{ with .Site.GetPage "section" "research" }}
-         {{ .Scratch.Set "sectionId" (default "Research" .Site.Params.research766666666666666yAlternateName) }}
+         {{ .Scratch.Set "sectionId" (default "Research" .Site.Params.researchAlternateName) }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
