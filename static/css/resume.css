@@ -153,3 +153,26 @@ a:hover, a:focus, a:active {
 img {
   max-width:80%;
 }
+
+.exp-tags {
+  font: 12px/1.5 'PT Sans', serif;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.exp-tags li {
+  float: left;
+  background: #eee;
+  border-radius: 5px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 15px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
