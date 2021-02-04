@@ -6,10 +6,13 @@
           <div class="resume-content mr-auto">
             <h3 class="mb-0">{{ .role }}</h3>
             <div class="subheading mb-3">{{ .company | markdownify }}</div>
-            <p>{{ .summary | markdownify }}</p>
+	    <ul>
+	      {{ range .summary }}
+	        <li>{{ . }}</li>
+	      {{ end }}
+	    </ul>
             <ul class="exp-tags">
               {{ range .tags }}
-                <!--<li><a class="exp-tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>-->
                 <li>{{ . }}</li>
               {{ end }}
             </ul>
